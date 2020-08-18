@@ -480,17 +480,15 @@ class _HomePageState extends State<HomePage> {
         'your other channel id',
         'your other channel name',
         'your other channel description',
-        icon: 'secondary_icon',
         sound: RawResourceAndroidNotificationSound('slow_spring_board'),
-        largeIcon: DrawableResourceAndroidBitmap('sample_large_icon'),
+        // largeIcon: DrawableResourceAndroidBitmap('sample_large_icon'),
         vibrationPattern: vibrationPattern,
         enableLights: true,
         color: const Color.fromARGB(255, 255, 0, 0),
         ledColor: const Color.fromARGB(255, 255, 0, 0),
         ledOnMs: 1000,
         ledOffMs: 500);
-    var iOSPlatformChannelSpecifics =
-        IOSNotificationDetails(sound: 'slow_spring_board.aiff');
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails();
     var platformChannelSpecifics = NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.schedule(
